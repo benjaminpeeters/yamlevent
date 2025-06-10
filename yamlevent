@@ -5,8 +5,8 @@
 # PURPOSE: Create new YAML events or add content to existing events
 #
 # MODES:
-#   --new      Create new event (equivalent to yamlevent-newlabel)
-#   --add      Add content to existing event (equivalent to yamlevent-addcontent)
+#   --new      Create new event with metadata and initial content
+#   --add      Add content to existing event
 #   --help     Show comprehensive help and examples
 #   --version  Show version information
 #

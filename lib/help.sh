@@ -5,7 +5,7 @@
 
 _show_help() {
     cat << 'EOF'
-yamlevent - Unified YAML event management tool
+yamlevent - YAML event entry management tool
 
 DESCRIPTION:
   Create new YAML event entries or add content to existing events with

@@ -189,17 +189,13 @@ The tool provides comprehensive error messages for:
 - Label format violations
 - Non-existent labels (for add mode)
 
-## Migration from Separate Functions
-
-If you're migrating from `yamlevent-newlabel` and `yamlevent-addcontent`:
+## Command Examples
 
 ```bash
-# Old syntax
-yamlevent-newlabel events.md 10 USA 1929 "Crisis" --description "..." --source "..."
-yamlevent-addcontent events.md "usa_1929_crisis" --description "..." --source "..."
-
-# New syntax  
+# Create new event
 yamlevent --new events.md 10 USA 1929 "Crisis" --description "..." --source "..."
+
+# Add content to existing event
 yamlevent --add events.md "usa_1929_crisis" --description "..." --source "..."
 ```
 
