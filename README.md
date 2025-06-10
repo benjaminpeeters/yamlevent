@@ -1,6 +1,6 @@
 # yamlevent
 
-A unified command-line tool for managing YAML event entries, combining the functionality of `yamlevent-newlabel` and `yamlevent-addcontent` into a single, streamlined interface.
+A command-line tool for managing YAML event entries.
 
 ## Features
 
