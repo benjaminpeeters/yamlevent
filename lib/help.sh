@@ -129,6 +129,14 @@ COMMON USE CASES:
        --description "Gold ownership prohibited|Federal control established" \
        --source "Treasury Archives|path:~/treasury/gold_act_records.txt"
 
+  4. SINGLE-LINE COMMANDS (for automated tools):
+     
+     # When backslashes not supported, use single lines with proper quoting:
+     yamlevent --new events.md 10 USA 1929-10 "Market Crash" --description "Black Tuesday crisis|Financial panic" --cause "Excessive speculation" --impact "Market collapse" --source "Fed Archives|url:https://fraser.stlouisfed.org|url:https://federalreservehistory.org"
+     
+     # Add content with single line:
+     yamlevent --add events.md "usa_1929_10_market_crash" --description "Banking crisis spreads" --cause "Bank runs" --impact "Credit system breaks" --source "FDIC Archives|path:/absolute/path/to/file.txt"
+
 TROUBLESHOOTING:
 
   ERROR: Label not found
@@ -214,6 +222,29 @@ FIELD DESCRIPTIONS:
   impact:      Consequences and effects
   demo:        Demographic/analytical information
   source:      Supporting documentation and references
+
+IMPORTANT USAGE NOTES:
+
+  COMMAND LINE FORMATTING:
+    - Examples show "\" for readability, but in automated tools use single lines
+    - Combine all arguments on one line when backslashes aren't supported
+    - Always quote arguments containing spaces, pipes, or special characters
+
+  QUOTING REQUIREMENTS:
+    - ALWAYS quote: dates with "to", titles with spaces, descriptions with |
+    - ALWAYS quote: source citations, paths with ~, complex arguments
+    - Example: --description "Crisis spreads|Markets crash" (note the quotes)
+
+  PATH REQUIREMENTS:
+    - File paths must exist and be readable
+    - Use absolute paths when possible: /full/path/to/file.txt
+    - Tilde expansion works: ~/file.txt expands to /home/user/file.txt
+    - Ensure file permissions allow reading
+
+  SPECIAL CHARACTERS:
+    - Pipe character | separates list items (must be quoted)
+    - Quotes, backslashes, and $ symbols in text may need escaping
+    - Test complex arguments in quotes: --description "Text with 'quotes'"
 
 For bug reports and issues: https://github.com/benjaminpeeters/yamlevent/issues
 EOF

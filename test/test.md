@@ -48,6 +48,21 @@ gbr_1844_second_test_event:
                 - https://boundary-test.com
                 - https://label-test.org
 
+deu_1923_q4_test_single_line:
+    date: 1923-Q4
+    iso: DEU
+    title: Test Single Line
+    content:
+      - description:
+          - Testing single line format
+          - No backslashes needed
+        cause: Documentation improvement
+        impact: Better Claude Code compatibility
+        source:
+            - citation: Test Documentation
+              path:
+                - /home/bpeeters/MEGA/config/dotfiles/gitconfig
+
 ```
 
 
